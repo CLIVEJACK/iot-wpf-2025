@@ -351,7 +351,11 @@ Iot 개발자 WPF 학습리포지토리 2025
 
 
 
-https://github.com/user-attachments/assets/be2a5375-c9be-49a6-8e78-5b7f8b7e8560
+
+
+https://github.com/user-attachments/assets/97347ce3-5107-4016-a1b3-3e921ee31571
+
+
 
 
 
