@@ -349,6 +349,12 @@ Iot 개발자 WPF 학습리포지토리 2025
 9. 텍스트박스 한글 입력 우선 처리
 10. 실행시 덱스트박스 포커스 가도록 처리
 
+
+
+https://github.com/user-attachments/assets/be2a5375-c9be-49a6-8e78-5b7f8b7e8560
+
+
+
 ## 6일차
 
 ### MovieFinder (계속)
