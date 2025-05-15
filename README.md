@@ -349,19 +349,29 @@ Iot 개발자 WPF 학습리포지토리 2025
 9. 텍스트박스 한글 입력 우선 처리
 10. 실행시 덱스트박스 포커스 가도록 처리
 
-
-
-
-
 https://github.com/user-attachments/assets/97347ce3-5107-4016-a1b3-3e921ee31571
-
-
-
-
 
 ## 6일차
 
 ### MovieFinder (계속)
 1. 상태표시줄 시계 동작
 2. 상태표시줄 검색결과 건수 표시
-3. 즐겨찾기 DB연동....
+3. 로그 출력 정리 
+4. 즐겨찾기 DB연동
+    1. Mysql Wockbench에서 moviefinder(스키마)데이터베이스  생성
+    2. movieitems 테이블 생성, 컬럼은 Moiveitmes.cs속성과 동일
+    3. INSERT,UPDATE, DELETE 작업
+
+    <img src="./image/wpf0016.png" width="650">
+
+5. Youtube 예고편 보기 
+    1. TrailerView, TrailerViewModel
+    2. WPF 기본 WebBrowser는 HTML5 기술이 표현안됨. 오류가 많음
+    2. NuGet 패키지 - CefSharp.Wpf.NETCore WeBrowser 패키지 설치
+    4. CefSharp.Wpf.NETCore 설치 시  프로젝트 플랫폼 대상을 Any Cpu
+    5. NuGet 패키지 - Google.Apos.YouTube.v3 설치
+
+6. 기타작업 완료
+7. 결과 화면
+
+
