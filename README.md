@@ -374,4 +374,4 @@ https://github.com/user-attachments/assets/97347ce3-5107-4016-a1b3-3e921ee31571
 6. 기타작업 완료
 7. 결과 화면
 
-
+https://github.com/user-attachments/assets/9c154174-cddf-4405-8133-c72103eadb08
