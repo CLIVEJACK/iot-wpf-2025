@@ -399,5 +399,9 @@ IoT 개발자 WPF 학습리포지토리 2025
 3. 위도(Lat, "Latitude"),경도(Lng, "Longitude") 표현
 
 
+    https://github.com/user-attachments/assets/42f16cba-53a0-467a-9ba3-2a141ac5d692
+
+
+
     
     
