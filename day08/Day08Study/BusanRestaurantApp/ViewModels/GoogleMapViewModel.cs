@@ -1,11 +1,5 @@
 ﻿using BusanRestaurantApp.Models;
-using CefSharp.DevTools.CSS;
 using CommunityToolkit.Mvvm.ComponentModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusanRestaurantApp.ViewModels
 {
@@ -16,7 +10,7 @@ namespace BusanRestaurantApp.ViewModels
 
         public GoogleMapViewModel()
         {
-            MatjibLocation = "";
+            MatjibLocation = "";            
         }
 
         public BusanItem SelectedMatjbItem
@@ -24,7 +18,7 @@ namespace BusanRestaurantApp.ViewModels
             get => _selectedMatjbItem;
             set {
                 SetProperty(ref _selectedMatjbItem, value);
-                // 위도(Lat), 경도(Lng)
+                // 위도(Latitude/Lat), 경도(Longitude/Lng)
                 MatjibLocation = $"https://google.com/maps/place/{SelectedMatjbItem.Lat},{SelectedMatjbItem.Lng}";
             }
         }

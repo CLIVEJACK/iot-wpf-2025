@@ -10,7 +10,7 @@
     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
     xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
     mc:Ignorable="d"
-    Title="부산 맛집정보액 v1.0" Height="580" Width="1000"
+    Title="부산 맛집정보앱 v1.0" Height="580" Width="1000"
     Dialog:DialogParticipation.Register="{Binding}">
     <mah:MetroWindow.IconTemplate>
         <DataTemplate>
@@ -53,20 +53,19 @@
         </StackPanel>       
         
         <!-- 데이터그리드 영역 -->
-        <DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10, 5"
-          AutoGenerateColumns="False"
-          SelectionMode="Single" SelectionUnit="FullRow" IsReadOnly="True"
-          SelectedItem="{Binding SelectedMatjibItem}"
-          ItemsSource="{Binding BusanItems}"
-          Style="{StaticResource MahApps.Styles.DataGrid.Azure}">
+        <DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,5"
+                  IsReadOnly="True" AutoGenerateColumns="False"
+                  ItemsSource="{Binding BusanItems}"
+                  SelectedItem="{Binding SelectedMatjbItem}"
+                  Style="{StaticResource MahApps.Styles.DataGrid.Azure}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
                     <i:InvokeCommandAction Command="{Binding MatjibItemDoubleClickCommand}" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
             <DataGrid.Columns>
-                <DataGridTextColumn Header="순번"
-                            FontWeight="Bold" Binding="{Binding Uc_Seq}" >
+                <DataGridTextColumn Header="순번" 
+                                    FontWeight="Bold" Binding="{Binding Uc_Seq}">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="TextAlignment" Value="Right" />
@@ -77,24 +76,24 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Image Source="{Binding Main_Img_Thumb}" Stretch="UniformToFill"
-                           Width="50" Height="38" />
+                   Width="50" Height="38"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTextColumn Header="맛집명"
-                            FontWeight="SemiBold" Binding="{Binding Main_Title}" />
+                <DataGridTextColumn Header="맛집명" 
+                                    FontWeight="SemiBold" Binding="{Binding Main_Title}" />
                 <DataGridTextColumn Header="구군" Binding="{Binding Gugun_Nm}" />
                 <!--<DataGridTextColumn Header="위치" Binding="{Binding Place}" />
-        <DataGridTextColumn Header="타이틀" Binding="{Binding Title}" />
-        <DataGridTextColumn Header="서브타이틀" Binding="{Binding SubTitle}" />-->
+                <DataGridTextColumn Header="타이틀" Binding="{Binding Title}" />
+                <DataGridTextColumn Header="서브타이틀" Binding="{Binding SubTitle}" />-->
                 <DataGridTemplateColumn Header="주소" Width="220">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Addr1}" TextWrapping="Wrap"
-                               MaxWidth="220" />
+                                       MaxWidth="220" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                </DataGridTemplateColumn>                
                 <!--<DataGridTextColumn Header="주소상세" Binding="{Binding Addr2}" />-->
                 <DataGridTextColumn Header="전화번호" Binding="{Binding Cntct_Tel}" />
                 <!--<DataGridTextColumn Header="홈페이지" Binding="{Binding Homepage_Url}" />-->
@@ -102,12 +101,13 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Rprsntv_Menu}"
-                               TextTrimming="CharacterEllipsis"
-                               MaxWidth="150"
-                               ToolTip="{Binding Rprsntv_Menu}" />
+                                       TextTrimming="CharacterEllipsis"
+                                       MaxWidth="150"
+                                       ToolTip="{Binding Rprsntv_Menu}" />                            
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                
             </DataGrid.Columns>
         </DataGrid>
         <!-- 상태표시줄 영역 -->

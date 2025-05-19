@@ -6,6 +6,7 @@ using CommunityToolkit.Mvvm.Input;
 using MahApps.Metro.Controls.Dialogs;
 using Newtonsoft.Json.Linq;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Windows;
@@ -16,6 +17,7 @@ namespace BusanRestaurantApp.ViewModels
     {
         IDialogCoordinator dialogCoordinator;
         private ObservableCollection<BusanItem> _busanItems;
+
         private int _pageNo;
         private int _numOfRows;
         private BusanItem _selectedMatjbItem;
@@ -37,7 +39,7 @@ namespace BusanRestaurantApp.ViewModels
         public int PageNo { get => _pageNo; set => SetProperty(ref _pageNo, value); }
         public int NumOfRows { get => _numOfRows; set => SetProperty(ref _numOfRows, value); }
 
-        public BusanItem SelectedMatjibItem
+        public BusanItem SelectedMatjbItem
         {
             get => _selectedMatjbItem;
             set => SetProperty(ref _selectedMatjbItem, value);
@@ -47,15 +49,14 @@ namespace BusanRestaurantApp.ViewModels
         public async Task MatjibItemDoubleClick()
         {
             var viewModel = new GoogleMapViewModel();
-            viewModel.SelectedMatjbItem = SelectedMatjibItem; // 메인창에 있는 선택아이템을 그래돌 구글 맵쪽으로 전달 
+            viewModel.SelectedMatjbItem = SelectedMatjbItem; // 메인창에 있는 선택아이템을 그대로 구글맵쪽으로 전달
             var view = new GoogleMapView
             {
                 DataContext = viewModel,
-            };
-            
-            view.Owner = Application.Current.MainWindow;    
+            };            
+            view.Owner = Application.Current.MainWindow;
             view.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            Common.LOGGER.Info($"{SelectedMatjibItem.Lat}, {SelectedMatjibItem.Lng}");
+            Common.LOGGER.Info($"{SelectedMatjbItem.Lat}, {SelectedMatjbItem.Lng}");
             Common.LOGGER.Info("구글맵 오픈");
             view.ShowDialog();
         }
@@ -105,7 +106,7 @@ namespace BusanRestaurantApp.ViewModels
                             Place = Convert.ToString(subitem["PLACE"]),
                             Title = Convert.ToString(subitem["TITLE"]),
                             SubTitle = Convert.ToString(subitem["SUBTITLE"]),
-                            Addr1 = Convert.ToString(subitem["ADDR1"]).Replace("\n",""),
+                            Addr1 = Convert.ToString(subitem["ADDR1"]).Replace("\n", ""),
                             Addr2 = Convert.ToString(subitem["ADDR2"]),
                             Cntct_Tel = Convert.ToString(subitem["CNTCT_TEL"]),
                             Homepage_Url = Convert.ToString(subitem["HOMEPAGE_URL"]),

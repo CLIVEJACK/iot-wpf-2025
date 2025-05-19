@@ -6,9 +6,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:BusanRestaurantApp.Views"
     xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
-    xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro" 
-    xmlns:cefsharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+    xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"     
     xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:cefsharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
     xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
     mc:Ignorable="d"
     Title="GoogleMapView" Height="450" Width="800"
@@ -20,11 +20,11 @@
     </mah:MetroWindow.IconTemplate>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.Column="20" FontWeight="Bold" Margin="5"
-               Content="{Binding SelectdMatjbItem.Main_Title}" />
+        <Label Grid.Row="0" FontSize="20" FontWeight="Bold" Margin="5"
+               Content="{Binding SelectedMatjbItem.Main_Title}" />
 
         <cefsharp:ChromiumWebBrowser
             Grid.Row="1"
