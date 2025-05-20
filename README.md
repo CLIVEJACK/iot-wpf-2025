@@ -500,6 +500,8 @@ IoT 개발자 WPF 학습리포지토리 2025
 
 6. MqttPub.py와 publish된 IoT데이터 WPF에서 Subscribe예제
 
+    https://github.com/user-attachments/assets/bd7d2f7b-bf35-4d9f-8ee9-c564cb5ecde4
+
 ## 10일차 
 
 ### 스마트홈 연동 모니터링앱
