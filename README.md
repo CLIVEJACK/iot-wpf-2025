@@ -526,9 +526,9 @@ IoT 개발자 WPF 학습리포지토리 2025
 - WpfMqttSubApp.Models의 SensingInfo.cs 가져오기
 - MQTT 센서 데이터로 동작용 변수 값 할당
 - 실행 화면 
-
-    https://github.com/user-attachments/assets/3791ace6-a866-4b89-86aa-b88ce4e25e57
-
+    
+    https://github.com/user-attachments/assets/a579e836-a056-4c81-82e0-8d223c4fb073
+    
     스마트홈 조작영상
   
     https://github.com/user-attachments/assets/5aaf0943-63d2-42b0-8af2-d464a7509b27
